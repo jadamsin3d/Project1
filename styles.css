@@ -1,9 +1,87 @@
+#logo {
+    margin-top: 0px;
+    padding: 0, 0, 0, 0;
+    width: 100px;
+    display: inline-block;
+}
+
+body {
+    background-size: cover;
+    background: url(pic/background1.jpg) no-repeat center center fixed;
+}
+
+.introduction{
+    line-height: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightgray;
+    text-align: center;
+    font-size: 15px;
+    font-weight:bold;
+}
+
+a:visited{
+    color: lightgray;
+}
+
+a:link{
+    color: lightgray;
+}
+
+li {
+    list-style-type:none;
+    margin-right: 80px;
+    margin-top: 0;
+    float:left;
+}
+
+
+#navLink{
+    font-size:20px;
+    margin-top: 4%;
+    float:right;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightgray;
+    display: inline-block;
+}
+
+.searchingBtn{
+    margin-top:50px;
+}
+
 #foot {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
     color: white;
+    text-align: center;
+}
+.navbar-brand {
+    background: null;
+}
+#name {
+    margin-top: 8%;
+    color: white;
+    text-align: center;
+    font-size: 100px;
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+.searchingWindow {
+    text-align: center;
+    width: 50%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 5rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.searchingBtn {
     text-align: center;
 }

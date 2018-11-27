@@ -23,6 +23,10 @@ a:visited{
     color: lightgray;
 }
 
+a:link{
+    color: lightgray;
+}
+
 li {
     list-style-type:none;
     margin-right: 80px;

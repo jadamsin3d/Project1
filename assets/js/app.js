@@ -41,8 +41,8 @@ $(document).ready(function () {
             for(var i = 0; i < response.tracks.items.length; i++) {
                 let artistsname = response.tracks.items[i].artists[0].name;
                 let trackname = response.tracks.items[i].name;
-                let trackimage = response.tracks.items[i]
-                artistlists.append("<p>" + "Artist Name: " + artistsname + "</p>" + "<p>" + "Song Name: " + trackname + "</p>" + "<br>");
+                let trackimage = response.tracks.items[i].album.images[1].url;
+                artistlists.append("<img src=" + trackimage + ">" + "<p>" + "Artist Name: " + artistsname + "</p>" + "<p>" + "Song Name: " + trackname + "</p>" + "<br>");
             }
         });
     });

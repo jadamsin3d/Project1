@@ -23,7 +23,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         let track = $(".searchField").val().trim();
-        let searchQRY = "https://api.spotify.com/v1/search?q=" + track + "&type=track%2Cartist&market=US&limit=25&offset=5";
+        let searchQRY = "https://api.spotify.com/v1/search?q=track:" + track + "&type=track&market=US&limit=25";
 
         $.ajax({
             url: searchQRY,
@@ -32,10 +32,18 @@ $(document).ready(function () {
             json: true,
             data: {
                 q: track,
-                type: "track"               
+                type: "track"
             }
         }).then(function (response) {
             console.log(response);
+            console.log(response.tracks.items.length);
+            let artistlists = $(".resultsdiv");
+            for(var i = 0; i < response.tracks.items.length; i++) {
+                let artistsname = response.tracks.items[i].artists[0].name;
+                let trackname = response.tracks.items[i].name;
+                let trackimage = response.tracks.items[i]
+                artistlists.append("<p>" + "Artist Name: " + artistsname + "</p>" + "<p>" + "Song Name: " + trackname + "</p>" + "<br>");
+            }
         });
     });
     GetToken();

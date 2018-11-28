@@ -1,8 +1,9 @@
 $(document).ready(function () {
     let queryURL = "https://accounts.spotify.com/api/token";
     let token = null;
+    let songArray = [];
+    let songObject = {};
     
-
     function GetToken() {
         $.ajax({
             url: queryURL,
@@ -38,15 +39,54 @@ $(document).ready(function () {
             console.log(response);
             console.log(response.tracks.items.length);
             let artistlists = $(".resultsdiv");
+            songArray = [];
+            songObject = {};
+
             for(var i = 0; i < response.tracks.items.length; i++) {
                 let artistsname = response.tracks.items[i].artists[0].name;
                 let trackname = response.tracks.items[i].name;
                 let trackimage = response.tracks.items[i].album.images[1].url;
-                artistlists.append("<img src=" + trackimage + ">" + "<p>" + "Artist Name: " + artistsname + "</p>" + "<p>" + "Song Name: " + trackname + "</p>" + "<br>");
+                let trackID = response.tracks.items[i].id;
+                let duration = response.tracks.items[i].duration_ms;
+
+                let p1 = $("<p>").text("Artist Name: " + artistsname);
+                let p2 = $("<p>").text("Song Name: " + trackname);
+                let albImage = $("<img>")
+
+                albImage.attr("aname", artistsname);
+                albImage.attr("tname", trackname);
+                albImage.attr("src", trackimage);
+                albImage.attr("tid", trackID);
+                albImage.attr("dur", duration);
+                albImage.addClass("albImage");
+
+                artistlists.append(albImage);
+                artistlists.append(p1);
+                artistlists.append(p2);
+                // artistlists.append("<img src=" + trackimage + ">" + "<p>" + "Artist Name: " + artistsname + "</p>" + "<p>" + "Song Name: " + trackname + "</p>" + "<br>");
             }
         });
     });
     GetToken();
+    $(document).on("click", ".albImage", function() {
+        let widgetDiv = $(".widgetplayer");
+
+        let tid = $(this).attr("tid");
+
+        let spotifyWidget = document.createElement("iframe");
+
+        let widgetaddy = "https://open.spotify.com/embed/track/" + tid;
+
+        console.log(widgetaddy);
+
+        spotifyWidget.setAttribute("src", widgetaddy);
+        spotifyWidget.style.width = "100%";
+        spotifyWidget.style.height = "380";
+        spotifyWidget.setAttribute("allowtransparency", true);
+        spotifyWidget.setAttribute("allow", "encrypted-media");
+        
+        widgetDiv.html(spotifyWidget);
+    });
 });
 
 

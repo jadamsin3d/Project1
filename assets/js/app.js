@@ -88,6 +88,20 @@ $(document).ready(function () {
         spotifyWidget.setAttribute("allow", "encrypted-media");
 
         widgetDiv.html(spotifyWidget);
+
+        var artistName = $(this).attr("aname");
+        var trackName = $(this).attr("tname");
+        var queryLyrics = "https://api.audd.io/findLyrics/?q=" + artistName + "_" + trackName;
+
+        $.ajax({
+            url: queryLyrics,
+            method: "GET"
+          })
+            .then(function(response) {
+                console.log(response);
+            });
+
+        
     });
 });
 

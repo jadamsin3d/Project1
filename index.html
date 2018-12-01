@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="assets/js/app.js"></script>
 </head>
 
@@ -16,45 +17,54 @@
 
     <img id="logo" src="pic/logo.png">
     <ul id="navLink">
-        <a href="#">
-            <li>PAGES</li>
-        </a>
-        <a href="#">
-            <li>INFO</li>
-        </a>
-        <a href="#">
-            <li>LANDING</li>
-        </a>
+                <i class="fa fa-twitch"></i>
+                <i class="fa fa-facebook-square"></i>
+                <i class="fa fa-steam-square"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-github"></i>
+                <i class="fa fa-stack-overflow"></i>
+
     </ul>
 
 
 
     <div>
-        <p id="name">Deep Cut </P>
+        <p id="name">Deep Cuts</P>
         <p class="introduction" id="p1">
-            Before human build the country. They build the music.
+            Before humans built the country... They built the music.
         </p>
         <p class="introduction" id="p2">
-            The thing that change the cultrue, change the human, change the world.
+            The thing that changed humans, changed culture, changed the world.
         </p>
         <form class="searchingBtn">
-            <input class="searchingWindow searchField" type="search" placeholder="Get start..." aria-label="Search">
+            <input class="searchingWindow searchField" type="search" placeholder="Get started here..." aria-label="Search">
             <br><br>
-            <a href="#">
-                <button type="button" class="btn btn-outline-light searchBtn">Start Trip</button>
+            <a href=".resultsdiv">
+                <button type="button" class="btn btn-outline-light searchBtn">Start Your Musical Journey</button>
             </a>
         </form>
     </div>
 
-    <div class="resultsdiv"></div>
+    <div id="blockCase">
+
+    </div>
+
+    <div class="resultsdiv row"></div>
+
+    <div class="jumbotron" id="lyrics">
+        <h1 class="display-4 lAlb"><img src="" class="lyricAlb"></h1>
+        <p class="infoLyrics"></p>
+        <hr class="my-4">
+        <p class="displayLyrics"></p>
+      </div>
 
     <div class="widgetplayer"></div>
 
-    <footer id="foot">
-        <p>DESIGNED BY DEEP CUT IN WASHINGTON&reg;</p>
+    <footer class="widgetplayer" id="foot">
+        <p>DESIGNED BY DEEP CUTS IN WASHINGTON&reg;</p>
     </footer>
 
-    /div>
+
     </div>
 
 </body>

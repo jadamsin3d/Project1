@@ -1,0 +1,127 @@
+#logo {
+    margin-left: 15%;
+    margin-top: 0px;
+    padding: 0, 0, 0, 0;
+    width: 150px;
+    display: inline-block;
+}
+
+html, body { scroll-behavior:smooth; }
+
+body {
+    background-size: cover;
+    background: url(pic/background1.jpg) no-repeat center center fixed;
+}
+
+.introduction {
+    line-height: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+
+a:visited{
+    color: white;
+}
+
+a:link{
+    color: white;
+}
+
+li {
+    list-style-type:none;
+    margin-right: 80px;
+    margin-top: 0;
+    float:left;
+}
+
+
+#navLink{
+    float: right;
+    margin-top: 2%;
+    margin-right: 10%;
+    font-size:17px;
+    color: white;
+    display: inline-block;
+}
+
+.searchingBtn{
+    margin-top:50px;
+}
+
+#foot {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+.navbar-brand {
+    background: null;
+}
+#name {
+    margin-top: 5%;
+    color: white;
+    text-align: center;
+    font-size: 100px;
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+.searchingWindow {
+    text-align: center;
+    width: 50%;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 5rem;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.searchingBtn {
+    text-align: center;
+}
+
+.results {
+    background-color: #495057;
+    text-align: center;
+    padding-top: 1%;
+    margin-left: 1%;
+    margin-top: 5%;
+    color:white;
+    display: inline-block;
+    width: 300px;
+    border-radius: 1rem;
+    transition:1s;
+
+}
+
+#blockCase{
+    margin-bottom:15%;
+}
+
+.fa{
+    margin-left: 30px;
+}
+
+button {
+    margin-bottom: 30px;
+}
+
+.lAlb {
+    width: 60px;
+}
+
+.infoLyrics {
+    text-align: right;
+}
+
+#lyrics {
+    margin: 0px 30px 75px 30px;
+}

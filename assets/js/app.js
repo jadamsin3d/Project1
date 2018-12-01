@@ -123,8 +123,8 @@ $(document).ready(function () {
                 let lyrics = response.result[0].lyrics;
 
                 $(".displayLyrics").append(lyrics);
-                $(".infoLyrics").append(artistName, trackName, albumName, releaseYear, duration);
-                $(".lAlb").append(albImage);
+                $(".infoLyrics").append("<p>" + "Artist: " + artistName + "</p>" + "<p>" + "Album: " +  albumName + "</p>");
+                $(".lAlb").append(trackName);
             });
     });
 });

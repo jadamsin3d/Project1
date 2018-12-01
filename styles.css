@@ -114,12 +114,8 @@ button {
     margin-bottom: 30px;
 }
 
-.lAlb {
-    width: 60px;
-}
-
 .infoLyrics {
-    text-align: right;
+    text-align: left;
 }
 
 #lyrics {

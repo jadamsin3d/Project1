@@ -22,6 +22,8 @@ $(document).ready(function () {
 
     setInterval(() => GetToken(), 300000);
 
+
+
     $(".searchBtn").on("click", function (event) {
         event.preventDefault();
         let track = $(".searchField").val().trim();
@@ -75,9 +77,9 @@ $(document).ready(function () {
                 
                 newDiv.append(albImage);
                 newDiv.append(p1);
-                newDiv.append(p2);
+                newDiv.append(p2);    
             }
-        });
+        }); 
     });
 
     GetToken();
@@ -103,14 +105,23 @@ $(document).ready(function () {
         document.getElementsByClassName("resultsdiv")[0].innerHTML = "";
         
         $(".jumbotron").show();
-        
+
+        let albImage = $("<img>");
         var artistName = $(this).attr("aname");
         var trackName = $(this).attr("tname");
         var duration = $(this).attr("dur");
         var releaseYear = $(this).attr("yearR");
         var albumName = $(this).attr("recName");
-        var albImage = $(this).attr("cover");
+            albImage = $(this).attr("cover");
         var queryLyrics = "https://api.audd.io/findLyrics/?q=" + artistName + "_" + trackName;
+
+        let v1 = $("<p>").text("Artist Name: " + artistName);
+        let v2 = $("<p>").text("Song Name: " + trackName);
+        let v3 = $("<p>").text("Album Title: " + albumName);
+        let v4 = $("<p>").text("Track Duration: " + duration);
+        let v5 = $("<p>").text("Date Released: " + releaseYear);
+
+        
 
 
         $.ajax({
@@ -121,9 +132,10 @@ $(document).ready(function () {
                 console.log(response);
                 let showLyrics = $(".displayLyrics");
                 let lyrics = response.result[0].lyrics;
+                
 
                 $(".displayLyrics").append(lyrics);
-                $(".infoLyrics").append(artistName, trackName, albumName, releaseYear, duration);
+                $(".infoLyrics").append(v1, v2, v3, v4, v5);
                 $(".lAlb").append(albImage);
             });
     });

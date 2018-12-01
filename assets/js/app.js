@@ -124,7 +124,7 @@ $(document).ready(function () {
 
                 $(".displayLyrics").append(lyrics);
                 $(".infoLyrics").append("<p>" + "Artist: " + artistName + "</p>" + "<p>" + "Album: " +  albumName + "</p>");
-                $(".lAlb").append(trackName);
+                $(".lAlb").append("<p>" + trackName + "</p>");
             });
     });
 });
